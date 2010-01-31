@@ -811,7 +811,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphonesimulator3.1.2]" = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos3.1.2]" = "iPhone Developer: Herbert Yeung (Y49H38E6NC)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -819,7 +819,7 @@
 				GCC_PREFIX_HEADER = cocos2dtest_Prefix.pch;
 				INFOPLIST_FILE = "cocos2dtest-Info.plist";
 				PRODUCT_NAME = cocos2dtest;
-				"PROVISIONING_PROFILE[sdk=iphonesimulator3.1.2]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos3.1.2]" = "0645D325-0470-4921-B88D-F8DE5C8EC4FD";
 			};
 			name = Debug;
 		};
