@@ -808,6 +808,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -815,6 +816,7 @@
 				GCC_PREFIX_HEADER = cocos2dtest_Prefix.pch;
 				INFOPLIST_FILE = "cocos2dtest-Info.plist";
 				PRODUCT_NAME = cocos2dtest;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 			};
 			name = Debug;
 		};
