@@ -14,7 +14,7 @@ mkdir -p $OUTPUT
 
 . "$WORKSPACE/build/build.config"
 
-cd $WORKSPACE/iphone;
+cd $WORKSPACE/;
 agvtool new-version -all $BUILD_NUMBER
 
 for sdk in $SDKS; do
