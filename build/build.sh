@@ -18,7 +18,7 @@ cd $WORKSPACE/;
 agvtool new-version -all $BUILD_NUMBER
 
 for sdk in $SDKS; do
-        cd $WORKSPACE/iphone
+        cd $WORKSPACE
         xcodebuild -target $TARGETNAME -configuration $CONFIG -sdk $sdk clean;
         xcodebuild -target $TARGETNAME -configuration $CONFIG -sdk $sdk || failed build;
 done
