@@ -23,22 +23,7 @@ cd $WORKSPACE/iphone;
 agvtool new-version -all $BUILD_NUMBER
 
 for sdk in $SDKS; do
-    for config in $CONFIGURATIONS; do
-        provision=$(eval echo \$`echo Provision$config`)
-        cert="$WORKSPACE/build/$provision"
-        archive="$OUTPUT/$JOB_NAME-$BUILD_NUMBER-$config.zip";
-        [ -f "$cert" ] && cp "$cert" "$PROFILE_HOME"
         cd $WORKSPACE/iphone
-
-        xcodebuild -configuration $config -sdk $sdk clean;
-        xcodebuild -configuration $config -sdk $sdk || failed build;
-        cd build/$config-iphoneos;
-        if [ $config == "Release" ]; then
-            zip -r -T -y "$archive" *.app* || failed zip
-            zip -j -T "$archive" "$WORKSPACE/iphone/icon.png" || failed icon
-        else
-            zip -r -T -y "$archive" *.app || failed zip
-            zip -j -T "$archive" "$cert" || failed cert
-        fi
-    done
+        xcodebuild -target $TARGETNAME -configuration $CONFIG -sdk $sdk clean;
+        xcodebuild -target $TARGETNAME -configuration $CONFIG -sdk $sdk || failed build;
 done
