@@ -2,6 +2,12 @@
 build/*
 *.pbxuser
 *.mode1v3
+build/ 
+*.pyc 
+*~.nib/ 
+*.pbxuser 
+*.perspective 
+*.perspectivev3 
 
 # old skool
 .svn
